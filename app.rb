@@ -70,7 +70,7 @@ class HangpersonApp < Sinatra::Base
     if @game.check_win_or_lose == :win
       erb :win
     else
-      redirect '/new'
+      redirect '/show'
     end
   end
   
@@ -78,7 +78,7 @@ class HangpersonApp < Sinatra::Base
     if @game.check_win_or_lose == :lose
       erb :lose
     else
-      redirect '/new'
+      redirect '/show'
     end
   end
   
