@@ -27,6 +27,7 @@ class HangpersonGame
   end
   
   def check_win_or_lose
+    raise ArgumentError, 'The word is empty!' if @word.empty?
     if @word == word_with_guesses
       return :win
     elsif @wrong_guesses.size > 6
